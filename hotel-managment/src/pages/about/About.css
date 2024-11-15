@@ -1,0 +1,176 @@
+/* About.css */
+
+/* Body Style */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('../../images/bg3.jpg') no-repeat center center fixed; /* Add your background image */
+  background-size: cover;
+}
+
+/* About Container */
+.about-container {
+  padding: 3rem 2rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9); /* White with transparency */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Creates a frosted glass effect */
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e63946;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #f1faee; /* Change color on hover */
+}
+
+/* Description and Subheadings */
+.about-description,
+h2 {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: 300; /* Lighter font weight */
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto; /* Centering the description */
+}
+
+/* Section Containers */
+.team-container,
+.testimonials-container,
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Team Member and Testimonial Styles */
+.team-member,
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #e63946;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member:hover,
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Image */
+.team-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #e63946; /* Border around image */
+}
+
+/* Testimonial Style */
+.testimonial {
+  font-style: italic;
+  color: #555; /* Darker color for testimonials */
+}
+
+/* Gallery Styles */
+.gallery-container {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Social Media Links */
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.social-media-links a {
+  color: #e63946;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-media-links a:hover {
+  transform: translateY(-3px);
+  color: #f1faee;
+}
+
+/* Map Container */
+.map-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Iframe for Map */
+iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 400px; /* Fixed height for better display */
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .social-media-links a {
+    font-size: 1rem; /* Smaller font for links on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* Smaller font for very small screens */
+  }
+
+  .about-description {
+    font-size: 0.9rem; /* Smaller description text */
+  }
+
+  .team-image {
+    width: 100px; /* Smaller team image */
+    height: 100px;
+  }
+}

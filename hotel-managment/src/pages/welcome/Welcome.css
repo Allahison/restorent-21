@@ -1,0 +1,47 @@
+/* Welcome.css */
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-image: url('../../images/bg3.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff; /* Text color */
+  }
+  
+  .welcome-message {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+    padding: 2rem;
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Adjust size as needed */
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Adjust size as needed */
+  }
+  
+  .explore-button {
+    background-color: #e63946; /* Button color */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    background-color: #f1faee; /* Change color on hover */
+    color: #e63946; /* Text color on hover */
+  }
+  

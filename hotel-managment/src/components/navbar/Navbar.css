@@ -1,0 +1,155 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent background */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s, border-bottom 0.4s;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background on scroll */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Brand */
+.navbar-title {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-title:hover {
+  color: #ff6347; /* Accent color on hover */
+}
+
+/* Navbar links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ff6347;
+  transform: translateY(-3px);
+}
+
+/* Logout button */
+.navbar-logout {
+  padding: 0.5rem 1.5rem; /* Increased padding for better click area */
+  background-color: #ff6347; /* Background color */
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  color: white; /* Text color */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: bold; /* Bold font */
+}
+
+.navbar-logout:hover {
+  background-color: #ff4500; /* Darker on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Navbar toggle button for mobile */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Hide by default */
+    opacity: 0; /* For animation */
+    transform: translateY(-20px); /* Slide down effect */
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show when active */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+  }
+
+  .navbar-toggle {
+    display: flex; /* Show toggle button on mobile */
+  }
+}
+
+/* Animation for underline */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6347;
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}

@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-image: url('../../images/bg2.jpeg'); /* Update with your background image */
+  background-size: cover; /* Cover to ensure full background */
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #444;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 40px auto; /* Increased top margin for better spacing */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background for better readability */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px); /* Adds a nice blur effect for a modern look */
+}
+
+.menu-container h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 25px;
+  text-transform: uppercase; /* For emphasis */
+}
+
+.search-bar,
+.category-select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd; /* Thicker border for better visibility */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.95); /* More opaque background */
+  transition: border-color 0.3s;
+}
+
+.search-bar:focus,
+.category-select:focus {
+  border-color: #007BFF; /* Highlight border color on focus */
+  outline: none;
+}
+
+.add-item-form,
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for better spacing */
+  margin-bottom: 30px;
+}
+
+.add-item-form input,
+.update-form input {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  transition: border-color 0.3s;
+}
+
+.add-item-form input:focus,
+.update-form input:focus {
+  border-color: #007BFF;
+}
+
+.add-item-form button,
+.update-form button {
+  padding: 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em; /* Larger font size for buttons */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-item-form button:hover,
+.update-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Slightly larger min size for cards */
+  gap: 30px; /* Increased gap for card spacing */
+}
+
+.menu-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px); /* More pronounced hover lift */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.menu-image {
+  width: 100%;
+  height: 180px; /* Increased height for better visuals */
+  object-fit: cover;
+  border-bottom: 2px solid #eee; /* Subtle border for separation */
+}
+
+.menu-title {
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #333;
+  text-align: center;
+  text-transform: capitalize; /* Capitalize for better aesthetics */
+}
+
+.menu-price {
+  color: #777;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold; /* Emphasized price */
+}
+
+.order-button,
+.edit-button,
+.delete-button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  margin: 5px auto;
+  text-align: center;
+  width: 45%; /* Ensuring buttons have uniform width */
+}
+
+.order-button {
+  background-color: #28a745; /* Green for order */
+}
+
+.edit-button {
+  background-color: #ffc107; /* Yellow for edit */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Red for delete */
+}
+
+.order-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px); /* Hover effect */
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .menu-title {
+    font-size: 1.5em; /* Adjusted font size */
+  }
+
+  .search-bar,
+  .category-select {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-card {
+    margin: 0 5px; /* Adjust margins for smaller screens */
+  }
+
+  .menu-title {
+    font-size: 1.2em; /* Responsive font size */
+  }
+
+  .menu-price {
+    font-size: 1em;
+  }
+
+  .add-item-form input,
+  .update-form input {
+    font-size: 14px; /* Adjusted font size for inputs */
+  }
+}

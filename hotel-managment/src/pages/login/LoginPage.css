@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)), url('https://www.google.com.pk/imgres?q=transparent%20image&imgurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-vector%2F20231113%2Fourmid%2Fpngtree-realistic-water-splash-effect-isolated-on-transparent-background-png-image_10585385.png&imgrefurl=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Ftransparent&docid=WPTVReU22wCyhM&tbnid=ByDPPuB1wfbonM&vet=12ahUKEwjWtaDFksCJAxXrTaQEHaLNFb8QM3oECHYQAA..i&w=540&h=360&hcb=2&ved=2ahUKEwjWtaDFksCJAxXrTaQEHaLNFb8QM3oECHYQAA');
+    background-size: cover;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    color: #8b4513; /* Warm brown for headers */
+    text-align: center;
+  }
+  
+  .input-field {
+    border: 1px solid #dcdcdc;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .login-button {
+    background-color: #8b4513; /* Matches header color */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #a0522d; /* Lighter brown for hover effect */
+  }
+  
+  .l-btn {
+    background: none;
+    border: none;
+    color: #8b4513;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .l-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 15px;
+  }
+  

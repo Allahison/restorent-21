@@ -1,0 +1,112 @@
+/* Navbar.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar:hover {
+    background-color: #444; /* Darker on hover */
+  }
+  
+  .navbar-title {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar-title:hover {
+    color: #ff6347; /* Color on hover */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-links li {
+    position: relative;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    color: #ff6347; /* Color on hover */
+    transform: translateY(-2px);
+  }
+  
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  .open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: absolute;
+      top: 60px; /* Adjust based on navbar height */
+      left: 0;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      display: none; /* Hide by default */
+      opacity: 0; /* For animation */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-20px); /* Slide down effect */
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Show when active */
+      opacity: 1; /* Fade in */
+      transform: translateY(0); /* Slide down */
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+  

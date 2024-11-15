@@ -1,0 +1,129 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  /* Background Image */
+   /* Replace with your image URL */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+}
+
+.about-container {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+  border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e63946;
+}
+
+.about-description,
+h2 {
+  margin: 1.5rem 0;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.team-container,
+.testimonials-container,
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.team-member,
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #e63946;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-member:hover,
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonial {
+  font-style: italic;
+}
+
+.gallery-container {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.social-media-links a {
+  color: #e63946;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media-links a:hover {
+  color: #f1faee;
+}
+
+.map-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  max-width: 600px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+}
